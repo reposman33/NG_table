@@ -1,0 +1,19 @@
+<input type="text" placeholder="Type a filter text" [(ngModel)]="query" />
+<table>
+  <tr>
+    <th>Id</th>
+    <th>title</th>
+    <th>body</th>
+  </tr>
+  <tbody>
+    <tr
+      *ngFor="
+        let post of posts | filter: query:'body' | hilite: 'body':query:'hilite'
+      "
+    >
+      <td>{{ post.id }}</td>
+      <td>{{ post.title }}</td>
+      <td [innerHtml]="post.body">{{ post.body }}</td>
+    </tr>
+  </tbody>
+</table>
