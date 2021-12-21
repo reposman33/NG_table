@@ -1,0 +1,19 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+input {
+  margin: 1rem auto;
+}
+table {
+  & th {
+    font-weight: bold;
+    background-color: bisque;
+  }
+  & tr:nth-child(odd) {
+    background-color: #eef5d2;
+  }
+  & tr:nth-child(even) {
+    background-color: rgb(200, 214, 226);
+  }
+
+}
